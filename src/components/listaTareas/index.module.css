@@ -18,11 +18,20 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.nombre {
+.ancho {
     width: 100%;
     margin-bottom: 5px;
 }
 
 .parrafo{
     max-width: 100%;
+}
+
+.h1 {
+    font-size: large;
+}
+
+.tareaNueva{
+    display: flex;
+    justify-content: space-between;
 }
