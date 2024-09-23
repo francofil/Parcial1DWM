@@ -2,19 +2,21 @@ import React, { useState, useEffect} from "react";
 import estilo from "./index.module.css";
 
 function Contador() {
-    const [count, setCount] = useState(0);
-
-    const incrementar = ()=> setCount(count + 1)
-    const decrementar = ()=> setCount(count - 1)
+    const [segundos, setSegundos] = useState(0);
 
     useEffect(() => {
-        document.title = `Contador: ${count}`;
-    }, [count])
+        // Inicia un intervalo que aumenta el valor de "segundos" cada segundo
+        const intervalo = setInterval(() => {
+          setSegundos(prevSegundos => prevSegundos + 1);
+        }, 1000); //Ejecuta SetInterval cada 1000 milisegundos, 1sec
+    
+        // Limpieza: limpia el intervalo cuando el componente se desmonta
+        return () => clearInterval(intervalo);
+      }, []);
+
     return (
-        <div className={estilo.card}>
-            <button onClick={incrementar} className={estilo.nombre}>Aumentar</button>
-            <button onClick={decrementar} className={estilo.nombre}>Decrementar</button>
-            {count}
+        <div className={estilo.card}>   
+            {segundos}
         </div>
     )
 
