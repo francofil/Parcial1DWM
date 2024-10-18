@@ -1,0 +1,49 @@
+/* Contenedor principal de la página de detalles */
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #000000;
+    margin: 20px;;
+  }
+  
+  /* Botón de 'Atrás' */
+  .backButton {
+    background-color: #ADD8E6;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .backButton:hover {
+    background-color: #87CEEB;
+  }
+  
+  /* Contenido de los detalles */
+  .detailsContent {
+    font-family: Verdana;
+    font-size: 18px;
+  }
+  
+  .detailsContent h2,
+  .detailsContent p {
+    margin: 10px 0;
+  }
+  
+  .detailsContent p {
+    font-size: 18px;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }

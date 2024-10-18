@@ -1,12 +1,14 @@
 import React from "react";
-import "./index.css";
-import { useContext } from "react";
-import { ThemeContext } from "../../contexts";
+import estiloButton from "./index.module.css";
+import { useNavigate } from 'react-router-dom';
 
-const Button = () => {
-  const themeSettings = useContext(ThemeContext);
+const Button = ({ children, onClickHandler }) => {
 
-  return <button className={"primary-" + themeSettings.mode}>Click</button>;
+  return (
+    <button className={estiloButton.Button} onClick={onClickHandler}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

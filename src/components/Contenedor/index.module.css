@@ -1,0 +1,11 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid; /* Definimos el estilo y ancho del borde */
+    border-color: rgb(255, 255, 255); /* Cambiamos el color del borde a azul */
+    background-color: rgb(63, 63, 63);
+    padding: 10px;
+    margin: 10px;
+}

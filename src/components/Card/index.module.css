@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  background-color: rgb(40, 38, 38);
+  /* Fondo blanco */
+  border: 1px solid #ddd;
+  /* Borde más claro */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  padding: 20px;
+  text-align: center;
+  /* Centrar el texto y botones */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Añadir sombra */
+  width: 160px;
+  /* Ajustar el ancho */
+  margin: 10px;
+  height: min-content;
+  text-wrap: wrap;
+  flex-direction: column;
+}
+
+.card button {
+  background-color: #007BFF;
+  /* Color de fondo para el botón */
+  border: none;
+  color: white;
+  /* Color de texto blanco */
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  /* Bordes redondeados en el botón */
+  cursor: pointer;
+  /* Cambiar el cursor a pointer */
+}
+
+.card button:hover {
+  background-color: #0056b3;
+  /* Cambiar color al pasar el mouse */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  /* Centra los botones horizontalmente */
+  gap: 10px;
+  /* Añade espacio entre botones */
+}

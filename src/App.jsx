@@ -1,30 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Button from './components/Button'
-import "./App.css";
-import MySwitch from "./components/MySwitch";
-import { ThemeContext } from "./contexts";
+import React, {useState, useEffect} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Details from './pages/detalles';
+import './App.css';
 
-function App() {
-  const [themeSettings, setThemeSettings] = useState({
-    mode: "light",
-    switchMode: () => {
-      setThemeSettings((prevState) => ({
-        ...prevState,
-        mode: prevState.mode === "light" ? "dark" : "light",
-      }));
-    },
-  });
+export default function App() {
+
   return (
-    <ThemeContext.Provider value={themeSettings}>
-      <div className={"App-" + themeSettings.mode}>
-        <Button />
-        <MySwitch />
-      </div>
-    </ThemeContext.Provider>
+    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
-
-export default App

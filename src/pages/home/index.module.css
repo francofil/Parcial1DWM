@@ -1,0 +1,65 @@
+.Contenedor {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ModalContent {
+  background-color: #373636;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ModalButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ModalInputs{
+  display: flex;
+  flex-direction: column;
+}
+
+.searchInput {
+  width: 95%;
+  padding: 10px;
+  margin: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input{
+  margin: 5px;
+  border-radius: 2px solid;
+}
+
+@media (max-width: 426px){
+  body{
+    background-color: rgb(57, 56, 56) ;
+  }
+}
+
+body{
+  margin: 0;
+}
